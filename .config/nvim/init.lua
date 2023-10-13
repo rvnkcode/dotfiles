@@ -1,0 +1,137 @@
+-- ======================================================= Namespace
+local cmd = vim.cmd
+local fn = vim.fn
+local g = vim.g
+local keymap = vim.keymap
+local opt = vim.opt
+
+g.mapleader = " "
+
+-- ======================================================= Options
+-- https://neovim.io/doc/user/options.html#option-summary
+if fn.has("mac") == 1 then
+  cmd("language en_US")
+end
+opt.autowrite = true
+opt.cindent = true
+opt.clipboard = "unnamedplus"
+opt.completeopt = { "menu", "menuone", "preview", "noinsert", "noselect" }
+opt.cursorline = true
+opt.diffopt:append("vertical")
+opt.expandtab = true
+opt.foldenable = false
+-- opt.foldmethod = "syntax"
+opt.ignorecase = true
+opt.langmap = {
+  "ㅁa",
+  "ㅠb",
+  "ㅊc",
+  "ㅇd",
+  "ㄷe",
+  "ㄹf",
+  "ㅎg",
+  "ㅗh",
+  "ㅑi",
+  "ㅓj",
+  "ㅏk",
+  "ㅣl",
+  "ㅡm",
+  "ㅜn",
+  "ㅐo",
+  "ㅔp",
+  "ㅂq",
+  "ㄱr",
+  "ㄴs",
+  "ㅅt",
+  "ㅕu",
+  "ㅍv",
+  "ㅈw",
+  "ㅌx",
+  "ㅛy",
+  "ㅋz",
+}
+opt.lazyredraw = true
+opt.list = true
+opt.listchars:append("eol:↲")
+opt.mouse = "a"
+opt.number = true
+opt.relativenumber = true
+opt.shiftround = true
+opt.shiftwidth = 4
+opt.showmatch = true
+opt.smartcase = true
+opt.softtabstop = 4
+if not g.vscode then
+  opt.spell = true
+end
+opt.splitbelow = true
+opt.splitright = true
+opt.switchbuf = "useopen"
+opt.termguicolors = true
+opt.title = true
+opt.undofile = true
+opt.wildignorecase = true
+opt.wrap = false
+
+-- Restore the last edited cursor position
+cmd([[au BufReadPost *
+\ if line("'\'") > 0 && line("'\'") <= line("$") |
+\	exe "norm g`\"" |
+\endif]])
+
+-- Customize indentation c++, CSS, HTML, JS, JSX, JSON, Lua, Markdown TS, TSX, xml, yaml
+cmd([[autocmd FileType cpp setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd Filetype css setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd Filetype html setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd Filetype javascript setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd Filetype javascriptreact setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd FileType json setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd FileType lua setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd Filetype markdown setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd Filetype typescript setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd Filetype typescriptreact setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd FileType xml setlocal shiftwidth=2 softtabstop=2]])
+cmd([[autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2]])
+
+-- Clipboard configuration
+-- https://github.com/search?q=g.clipboard+wsl+language%3ALua&type=code
+-- TODO: Install win32yank: https://github.com/neovim/neovim/wiki/FAQ#old-instructions
+if vim.fn.executable("win32yank") == 1 then
+  g.clipboard = {
+    name = "win32yank.exe",
+    copy = {
+      ["+"] = "win32yank.exe -i --crlf",
+      ["*"] = "win32yank.exe -i --crlf",
+    },
+    paste = {
+      ["+"] = "win32yank.exe -o --lf",
+      ["*"] = "win32yank.exe -o --lf",
+    },
+    cache_enabled = 0,
+  }
+  --  Or, maybe can use wcopy? https://github.com/memoryInject/wsl-clipboard
+end
+
+-- ======================================================= Keymap
+keymap.set("n", "<leader>v", ":e $MYVIMRC<CR>")
+
+-- ======================================================= Lazy nvim (plugin)
+-- https://github.com/folke/lazy.nvim#-installation
+if not g.vscode then
+  local lazypath = fn.stdpath("data") .. "/lazy/lazy.nvim"
+  if not vim.loop.fs_stat(lazypath) then
+    fn.system({
+      "git",
+      "clone",
+      "--filter=blob:none",
+      "https://github.com/folke/lazy.nvim.git",
+      "--branch=stable", -- latest stable release
+      lazypath,
+    })
+  end
+  opt.rtp:prepend(lazypath)
+
+  require("lazy").setup({
+    import = "plugins",
+  })
+end
