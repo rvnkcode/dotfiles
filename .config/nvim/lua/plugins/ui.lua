@@ -1,5 +1,5 @@
 return {
-  {
+  --[[ {
     -- https://github.com/RRethy/nvim-base16
     -- Preview base16: https://base16-fork.github.io
     "RRethy/nvim-base16",
@@ -7,6 +7,15 @@ return {
     priority = 1000,
     config = function()
       vim.cmd.colorscheme("base16-tomorrow-night")
+    end,
+  }, ]]
+  {
+    -- https://github.com/Mofiqul/vscode.nvim
+    "Mofiqul/vscode.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("vscode").load()
     end,
   },
   {
@@ -25,7 +34,12 @@ return {
     -- https://github.com/nvim-lualine/lualine.nvim
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
-    config = true,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      options = {
+        theme = "vscode",
+      },
+    },
   },
   {
     -- https://github.com/nvimdev/dashboard-nvim
@@ -81,11 +95,11 @@ return {
       },
       {
         "[t",
-        function ()
+        function()
           require("todo-comments").jump_prev()
         end,
-        desc = "Previous TODO comment"
-      }
+        desc = "Previous TODO comment",
+      },
     },
   },
 }
