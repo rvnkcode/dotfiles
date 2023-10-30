@@ -1,4 +1,5 @@
 return {
+  --[[ 
   {
     -- https://github.com/RRethy/nvim-base16
     -- Preview base16: https://base16-fork.github.io
@@ -7,6 +8,16 @@ return {
     priority = 1000,
     config = function()
       vim.cmd.colorscheme("base16-tomorrow-night")
+    end,
+  },
+ ]]
+  {
+    -- https://github.com/Mofiqul/vscode.nvim
+    "Mofiqul/vscode.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("vscode").load()
     end,
   },
   {
@@ -81,11 +92,11 @@ return {
       },
       {
         "[t",
-        function ()
+        function()
           require("todo-comments").jump_prev()
         end,
-        desc = "Previous TODO comment"
-      }
+        desc = "Previous TODO comment",
+      },
     },
   },
 }
