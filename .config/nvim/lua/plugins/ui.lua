@@ -1,5 +1,6 @@
 return {
-  --[[ {
+  --[[ 
+  {
     -- https://github.com/RRethy/nvim-base16
     -- Preview base16: https://base16-fork.github.io
     "RRethy/nvim-base16",
@@ -8,7 +9,8 @@ return {
     config = function()
       vim.cmd.colorscheme("base16-tomorrow-night")
     end,
-  }, ]]
+   },
+ ]]
   {
     -- https://github.com/Mofiqul/vscode.nvim
     "Mofiqul/vscode.nvim",
