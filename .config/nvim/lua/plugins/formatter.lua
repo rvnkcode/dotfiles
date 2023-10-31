@@ -1,3 +1,4 @@
+-- https://github.com/tjtrabue/dotfiles/blob/414a1e277324ba6f8b8c37a22f0825abf32b3f02/link/config/nvim/plug-config/formatter.config.lua#L93
 local function formatter_sql_formatter()
   return {
     exe = "sql-formatter",
