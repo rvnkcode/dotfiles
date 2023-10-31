@@ -1,3 +1,10 @@
+local function formatter_sql_formatter()
+  return {
+    exe = "sql-formatter",
+    stdin = true,
+  }
+end
+
 -- TODO: Install formatter :Mason
 return {
   {
@@ -12,6 +19,9 @@ return {
           },
           css = {
             require("formatter.filetypes.css").prettier,
+          },
+          sql = {
+            formatter_sql_formatter,
           },
         },
       })
