@@ -9,7 +9,7 @@ return {
     config = function()
       vim.cmd.colorscheme("base16-tomorrow-night")
     end,
-  },
+   },
  ]]
   {
     -- https://github.com/Mofiqul/vscode.nvim
@@ -36,7 +36,12 @@ return {
     -- https://github.com/nvim-lualine/lualine.nvim
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
-    config = true,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      options = {
+        theme = "vscode",
+      },
+    },
   },
   {
     -- https://github.com/nvimdev/dashboard-nvim

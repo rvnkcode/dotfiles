@@ -19,11 +19,15 @@ src
 toml
 cargo
 github
+<<<<<<< HEAD
 sqlite
+=======
 JS
 JSX
 TSX
 xml
 yaml
 config
+sqlite
 SQLite
+>>>>>>> 1571d69e1faa708172130741e048879705a29efb
