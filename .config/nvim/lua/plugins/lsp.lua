@@ -30,7 +30,6 @@ return {
             "marksman",
             "prismals",
             "rust_analyzer",
-            "sqlls",
             "stylelint_lsp",
             "svelte",
             "tailwindcss",
@@ -84,7 +83,6 @@ return {
       lspconfig.marksman.setup({})
       lspconfig.prismals.setup({})
       lspconfig.rust_analyzer.setup({})
-      lspconfig.sqlls.setup({})
       lspconfig.stylelint_lsp.setup({})
       lspconfig.svelte.setup({})
       lspconfig.tailwindcss.setup({})
