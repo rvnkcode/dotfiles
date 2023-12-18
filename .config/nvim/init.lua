@@ -95,21 +95,29 @@ cmd([[autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2]])
 
 -- Clipboard configuration
 -- https://github.com/search?q=g.clipboard+wsl+language%3ALua&type=code
--- TODO: Install win32yank: https://github.com/neovim/neovim/wiki/FAQ#old-instructions
-if vim.fn.executable("win32yank") == 1 then
-  g.clipboard = {
-    name = "win32yank.exe",
+-- TODO: Install wcopy: https://github.com/memoryInject/wsl-clipboard
+local function is_wsl()
+  local version_file = io.open("/proc/version", "rb")
+  if version_file ~= nil and string.find(version_file:read("*a"), "microsoft") then
+    version_file:close()
+    return true
+  end
+  return false
+end
+
+if is_wsl() then
+  vim.g.clipboard = {
+    name = "wsl-clipboard",
     copy = {
-      ["+"] = "win32yank.exe -i --crlf",
-      ["*"] = "win32yank.exe -i --crlf",
+      ["+"] = "wcopy",
+      ["*"] = "wcopy"
     },
     paste = {
-      ["+"] = "win32yank.exe -o --lf",
-      ["*"] = "win32yank.exe -o --lf",
+      ["+"] = "wpaste",
+      ["*"] = "wpaste"
     },
-    cache_enabled = 0,
+    cache_enabled = true
   }
-  --  Or, maybe can use wcopy? https://github.com/memoryInject/wsl-clipboard
 end
 
 -- ======================================================= Keymap
