@@ -18,6 +18,7 @@ return {
         -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
         opts = {
           ensure_installed = {
+            "astro",
             "bashls",
             "biome",
             "cssls",
