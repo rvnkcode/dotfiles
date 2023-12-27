@@ -21,6 +21,9 @@ return {
           css = {
             require("formatter.filetypes.css").prettier,
           },
+          typescript = {
+            require("formatter.filetypes.typescript").prettier,
+          },
           rust = {
             formatter_rust,
           },
