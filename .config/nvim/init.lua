@@ -79,7 +79,8 @@ cmd([[au BufReadPost *
 \	exe "norm g`\"" |
 \endif]])
 
--- Customize indentation c++, CSS, HTML, JS, JSX, JSON, Lua, Markdown TS, TSX, xml, yaml
+-- Customize indentation Astro, c++, CSS, HTML, JS, JSX, JSON, Lua, Markdown TS, TSX, XML, YAML
+cmd([[autocmd FileType astro setlocal shiftwidth=2 softtabstop=2]])
 cmd([[autocmd FileType cpp setlocal shiftwidth=2 softtabstop=2]])
 cmd([[autocmd Filetype css setlocal shiftwidth=2 softtabstop=2]])
 cmd([[autocmd Filetype html setlocal shiftwidth=2 softtabstop=2]])
