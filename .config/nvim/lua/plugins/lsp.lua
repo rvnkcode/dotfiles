@@ -47,6 +47,7 @@ return {
       capabilities.textDocument.completion.completionItem.snippetSupport = true
 
       local lspconfig = require("lspconfig")
+      lspconfig.astro.setup({})
       lspconfig.bashls.setup({})
       lspconfig.biome.setup({})
       lspconfig.cssls.setup({
@@ -189,6 +190,7 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
       local servers = {
+        "astro",
         "bashls",
         "biome",
         "cssls",
@@ -201,13 +203,12 @@ return {
         "marksman",
         "prismals",
         "rust_analyzer",
-        "sqlls",
         "stylelint_lsp",
         "svelte",
         "tailwindcss",
-        "taplo",
+        "taplo", -- TOML
         "tsserver",
-        "lemminx",
+        "lemminx", -- XML
         "yamlls",
       }
       for _, lsp in ipairs(servers) do
