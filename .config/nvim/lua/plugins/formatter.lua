@@ -27,6 +27,9 @@ return {
           rust = {
             formatter_rust,
           },
+          markdown = {
+            require("formatter.filetypes.markdown").prettier,
+          },
         },
       })
     end,

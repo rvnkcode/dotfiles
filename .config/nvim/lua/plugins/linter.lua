@@ -9,6 +9,7 @@ return {
     -- TODO: Install linter :Mason
     lint.linters_by_ft = {
       sql = { "sqlfluff" },
+      markdown = { "markdownlint" },
     }
 
     local sqlfluff = lint.linters.sqlfluff
@@ -16,7 +17,7 @@ return {
 
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
       group = vim.api.nvim_create_augroup("LintGroup", { clear = true }),
-      pattern = { "*.sql" },
+      pattern = { "*.sql", "*.md" },
       callback = function()
         lint.try_lint()
       end,
