@@ -56,7 +56,10 @@ return {
     -- https://github.com/windwp/nvim-ts-autotag/issues/64
     "windwp/nvim-ts-autotag",
     dependencies = "nvim-treesitter/nvim-treesitter",
-    event = "InsertEnter",
-    config = true,
+    config = function()
+      require("nvim-ts-autotag").setup({})
+    end,
+    lazy = true,
+    event = "VeryLazy",
   },
 }
