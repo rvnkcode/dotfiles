@@ -21,14 +21,26 @@ return {
           css = {
             require("formatter.filetypes.css").prettier,
           },
-          typescript = {
-            require("formatter.filetypes.typescript").prettier,
-          },
           rust = {
             formatter_rust,
           },
           markdown = {
             require("formatter.filetypes.markdown").prettier,
+          },
+          -- https://github.com/claby2/dotfiles/blob/1944631d1c456b6730901cfbcebdf3e92339abb4/.config/nvim/lua/plugins.lua#L138
+          astro = {
+            function()
+              return {
+                exe = "npx",
+                args = {
+                  "prettier",
+                  "--stdin-filepath",
+                  vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+                  "--plugin=prettier-plugin-astro",
+                },
+                stdin = true,
+              }
+            end,
           },
         },
       })
