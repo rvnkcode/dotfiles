@@ -42,6 +42,9 @@ return {
               }
             end,
           },
+          typescript = {
+            require("formatter.filetypes.typescript").prettier,
+          },
         },
       })
     end,
