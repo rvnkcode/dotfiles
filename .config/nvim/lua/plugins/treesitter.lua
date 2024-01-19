@@ -23,6 +23,7 @@ return {
           "gitignore",
           "html",
           "http",
+          "java",
           "javascript",
           "json",
           "jsonc",

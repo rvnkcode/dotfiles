@@ -26,6 +26,7 @@ return {
             "dockerls",
             "eslint",
             "html",
+            "java_language_server",
             "jsonls",
             "lua_ls",
             "marksman",
@@ -66,6 +67,7 @@ return {
       lspconfig.html.setup({
         capabilities = capabilities,
       })
+      lspconfig.java_language_server.setup({})
       lspconfig.jsonls.setup({
         capabilities = capabilities,
       })
@@ -198,6 +200,7 @@ return {
         "dockerls",
         "eslint",
         "html",
+        "java_language_server",
         "jsonls",
         "lua_ls",
         "marksman",
