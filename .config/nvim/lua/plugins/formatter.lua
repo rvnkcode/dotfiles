@@ -45,6 +45,9 @@ return {
           typescript = {
             require("formatter.filetypes.typescript").prettier,
           },
+          java = {
+            require("formatter.filetypes.java").google_java_format,
+          },
         },
       })
     end,
