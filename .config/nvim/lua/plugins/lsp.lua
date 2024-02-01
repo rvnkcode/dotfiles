@@ -2,6 +2,18 @@
 -- https://github.com/LazyVim/LazyVim/tree/main/lua/lazyvim/plugins
 return {
   {
+    -- https://github.com/mfussenegger/nvim-jdtls
+    "mfussenegger/nvim-jdtls",
+    ft = { "java " },
+    opts = {
+      cmd = { vim.fn.stdpath("data") .. "/mason/bin/jdtls" },
+      root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+    },
+    config = function(_, opts)
+      require("jdtls").start_or_attach(opts)
+    end,
+  },
+  {
     -- https://github.com/neovim/nvim-lspconfig
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
@@ -26,7 +38,7 @@ return {
             "dockerls",
             "eslint",
             "html",
-            "java_language_server",
+            "jdtls",
             "jsonls",
             "lua_ls",
             "marksman",
@@ -67,7 +79,7 @@ return {
       lspconfig.html.setup({
         capabilities = capabilities,
       })
-      lspconfig.java_language_server.setup({})
+      lspconfig.jdtls.setup({})
       lspconfig.jsonls.setup({
         capabilities = capabilities,
       })
@@ -200,7 +212,7 @@ return {
         "dockerls",
         "eslint",
         "html",
-        "java_language_server",
+        "jdtls",
         "jsonls",
         "lua_ls",
         "marksman",
