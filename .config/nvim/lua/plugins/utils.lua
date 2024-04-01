@@ -83,12 +83,6 @@ return {
     config = true,
   },
   {
-    -- https://github.com/ellisonleao/glow.nvim
-    "ellisonleao/glow.nvim",
-    config = true,
-    cmd = "Glow",
-  },
-  {
     -- https://github.com/github/copilot.vim
     "github/copilot.vim",
     event = "VeryLazy",
