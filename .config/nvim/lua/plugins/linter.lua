@@ -15,6 +15,9 @@ return {
     local sqlfluff = lint.linters.sqlfluff
     sqlfluff.args = { "lint", "--format=json", "--dialect=sqlite" }
 
+    local markdownlint = lint.linters.markdownlint
+    markdownlint.args = { "--disable", "MD013", "MD024", "MD026", "--" }
+
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
       group = vim.api.nvim_create_augroup("LintGroup", { clear = true }),
       pattern = { "*.sql", "*.md" },
