@@ -15,6 +15,7 @@ end
 opt.autowrite = true
 opt.cindent = true
 opt.clipboard = "unnamedplus"
+opt.colorcolumn = "80"
 opt.completeopt = { "menu", "menuone", "preview", "noinsert", "noselect" }
 opt.cursorline = true
 opt.diffopt:append("vertical")
@@ -111,13 +112,13 @@ if is_wsl() then
     name = "wsl-clipboard",
     copy = {
       ["+"] = "wcopy",
-      ["*"] = "wcopy"
+      ["*"] = "wcopy",
     },
     paste = {
       ["+"] = "wpaste",
-      ["*"] = "wpaste"
+      ["*"] = "wpaste",
     },
-    cache_enabled = true
+    cache_enabled = true,
   }
 end
 
