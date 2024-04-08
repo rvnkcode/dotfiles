@@ -52,7 +52,7 @@ return {
             "tailwindcss",
             "taplo", -- TOML
             "tsserver",
-            "lemminx", -- XML
+            -- "lemminx", -- XML
             "yamlls",
           },
         },
@@ -107,7 +107,7 @@ return {
       lspconfig.tailwindcss.setup({})
       lspconfig.taplo.setup({})
       lspconfig.tsserver.setup({})
-      lspconfig.lemminx.setup({})
+      -- lspconfig.lemminx.setup({})
       lspconfig.yamlls.setup({})
     end,
     keys = {
@@ -226,7 +226,7 @@ return {
         "tailwindcss",
         "taplo", -- TOML
         "tsserver",
-        "lemminx", -- XML
+        -- "lemminx", -- XML
         "yamlls",
       }
       for _, lsp in ipairs(servers) do
