@@ -92,9 +92,9 @@ make CMAKE_BUILD_TYPE=Release
 cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 npm install -g neovim
 sudo apt install ripgrep
+sudo apt install wl-clipboard
 ```
 
-- [ ] Clipboard configuration
 - [x] Install linter `:Mason`
   - [x] sqlfluff
   - [x] markdownlint
@@ -128,6 +128,7 @@ unset ENV_VAR
 sudo apt install sway
 sudo apt install firefox
 sudo apt install wofi
+sudo apt install xwayland
 ```
 
 ## APT History
