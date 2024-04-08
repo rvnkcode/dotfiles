@@ -49,7 +49,6 @@ fc-list | grep "sarasa"
 - [Sarasa-Gothic-Nerd-Fonts](https://github.com/jonz94/Sarasa-Gothic-Nerd-Fonts/releases/tag/v1.0.5-0)
   - [Sarasa Gothic Mono](https://picaq.github.io/sarasa/)
 - [D2Coding Ver 1.3.2](https://github.com/naver/d2codingfont/releases/tag/VER1.3.2)
-<!-- not yet -->
 - [네이버 나눔 글꼴](https://hangeul.naver.com/font/nanum)
 
 ## Zsh
