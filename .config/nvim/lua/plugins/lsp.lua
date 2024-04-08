@@ -22,6 +22,9 @@ return {
         -- https://github.com/williamboman/mason.nvim
         "williamboman/mason.nvim",
         cmd = "Mason",
+        opts = {
+          log_level = vim.log.levels.DEBUG,
+        },
         config = true,
       },
       {
