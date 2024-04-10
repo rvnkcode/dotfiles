@@ -9,10 +9,7 @@ Add some public key to the `~/.ssh/authorized_keys` if needed.
 ```zsh
 sudo apt update
 sudo apt upgrade
-sudo apt install git
-sudo apt install gh
-sudo apt install zsh
-sudo apt install ranger
+sudo apt install git gh zsh ranger
 ```
 
 ## dotfiles
@@ -90,8 +87,7 @@ git checkout stable
 make CMAKE_BUILD_TYPE=Release
 cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 npm install -g neovim
-sudo apt install ripgrep
-sudo apt install wl-clipboard
+sudo apt install ripgrep wl-clipboard
 ```
 
 - [x] Install linter `:Mason`
@@ -124,10 +120,9 @@ unset ENV_VAR
 ## Desktop
 
 ```zsh
-sudo apt install sway
+sudo apt install sway wofi xwayland
 sudo apt install firefox
-sudo apt install wofi
-sudo apt install xwayland
+sudo apt install fcitx5 fcitx5-hangul fcitx5-mozc
 ```
 
 ## APT History
