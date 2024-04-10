@@ -120,7 +120,7 @@ unset ENV_VAR
 ## Desktop
 
 ```zsh
-sudo apt install sway wofi xwayland
+sudo apt install sway wofi xwayland swaylock swayidle
 sudo apt install firefox
 sudo apt install fcitx5 fcitx5-hangul fcitx5-mozc
 ```
