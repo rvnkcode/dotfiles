@@ -75,6 +75,10 @@ npm doctor
 npm install -g npm@latest
 ```
 
+## Bun
+
+[Installation | Bun Docs](https://bun.sh/docs/installation)
+
 ## Neovim
 
 [Neovim/Build.md](https://github.com/neovim/neovim/blob/master/BUILD.md)
