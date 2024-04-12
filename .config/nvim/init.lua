@@ -62,9 +62,10 @@ opt.shiftwidth = 4
 opt.showmatch = true
 opt.smartcase = true
 opt.softtabstop = 4
-if not g.vscode then
+--[[ if not g.vscode then
   opt.spell = true
-end
+  opt.spelllang = "en_us"
+end ]]
 opt.splitbelow = true
 opt.splitright = true
 opt.switchbuf = "useopen"
