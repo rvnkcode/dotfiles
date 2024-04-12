@@ -63,9 +63,10 @@ p10k configure # if needed
 
 ## asdf
 
-[Getting Started | asdf](https://asdf-vm.com/guide/getting-started.html)
+[Getting Started | asdf](https://asdf-vm.com/guide/getting-started.html)  
+[asdf plugins repository](https://github.com/asdf-vm/asdf-plugins)
 
-Install nodejs.
+### Nodejs
 
 ```zsh
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -75,9 +76,12 @@ npm doctor
 npm install -g npm@latest
 ```
 
-## Bun
+### Bun
 
-[Installation | Bun Docs](https://bun.sh/docs/installation)
+```zsh
+asdf plugin add Bun
+asdf install bun latest
+```
 
 ## Neovim
 
@@ -93,15 +97,6 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 npm install -g neovim
 sudo apt install ripgrep wl-clipboard
 ```
-
-- [x] Install linter `:Mason`
-  - [x] sqlfluff
-  - [x] markdownlint
-- [x] Install formatter `:Mason`
-  - [x] stylua
-  - [x] prettier
-  - [x] google_java_format
-- [ ] Deal with lemminx
 
 ## GitHub Auth and git
 
