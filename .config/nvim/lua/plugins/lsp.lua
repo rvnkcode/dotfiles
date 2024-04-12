@@ -25,32 +25,42 @@ return {
         config = true,
       },
       {
-        -- https://github.com/williamboman/mason-lspconfig.nvim
-        "williamboman/mason-lspconfig.nvim",
-        -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+        -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        cmd = { "MasonToolsInstall", "MasonToolsUpdate", "MasonToolsClean" },
         opts = {
           ensure_installed = {
-            "astro",
-            "bashls",
+            -- lsp
+            "astro-language-server",
+            "bash-language-server",
             "biome",
-            "cssls",
-            "docker_compose_language_service",
-            "dockerls",
-            "eslint",
-            "html",
+            "css-lsp",
+            "docker-compose-language-service",
+            "dockerfile-language-server",
+            "eslint-lsp",
+            "html-lsp",
             "jdtls",
-            "jsonls",
-            "lua_ls",
+            "json-lsp",
+            "lua-language-server",
             "marksman",
-            "prismals",
-            "rust_analyzer",
-            "stylelint_lsp",
-            "svelte",
-            "tailwindcss",
+            "prisma-language-server",
+            "rust-analyzer",
+            "stylelint-lsp",
+            "svelte-language-server",
+            "tailwindcss-language-server",
             "taplo", -- TOML
-            "tsserver",
+            "typescript-language-server",
             "lemminx", -- XML
-            "yamlls",
+            "yaml-language-server",
+            -- linter
+            "codespell",
+            "markdownlint",
+            "sqlfluff",
+            "typos",
+            -- formatter
+            "google-java-format",
+            "prettier",
+            "stylua",
           },
         },
       },
