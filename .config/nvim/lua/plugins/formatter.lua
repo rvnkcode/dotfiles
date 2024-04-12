@@ -6,7 +6,6 @@ local function formatter_rust()
   }
 end
 
--- TODO: Install formatter :Mason
 return {
   {
     -- https://github.com/mhartington/formatter.nvim
