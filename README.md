@@ -83,6 +83,17 @@ asdf plugin add Bun
 asdf install bun latest
 ```
 
+### Rust
+
+```zsh
+asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+asdf install rust latest
+```
+
+#### Typos
+
+After installed some package, should run `asdf reshim`
+
 ## Neovim
 
 [Neovim/Build.md](https://github.com/neovim/neovim/blob/master/BUILD.md)
