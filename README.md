@@ -28,7 +28,7 @@ dfs checkout rpi
 ## Font
 
 ```zsh
-wget https://github.com/jonz94/Sarasa-Gothic-Nerd-Fonts/releases/download/v1.0.5-0/sarasa-fixed-k-nerd-font.zip
+wget https://github.com/jonz94/Sarasa-Gothic-Nerd-Fonts/releases/download/v1.0.10-0/sarasa-fixed-k-nerd-font.zip
 wget https://github.com/naver/d2codingfont/releases/download/VER1.3.2/D2Coding-Ver1.3.2-20180524.zip
 ```
 
@@ -43,7 +43,7 @@ fc-list | grep "D2"
 fc-list | grep "sarasa"
 ```
 
-- [Sarasa-Gothic-Nerd-Fonts](https://github.com/jonz94/Sarasa-Gothic-Nerd-Fonts/releases/tag/v1.0.5-0)
+- [Sarasa-Gothic-Nerd-Fonts](https://github.com/jonz94/Sarasa-Gothic-Nerd-Fonts/releases)
   - [Sarasa Gothic Mono](https://picaq.github.io/sarasa/)
 - [D2Coding Ver 1.3.2](https://github.com/naver/d2codingfont/releases/tag/VER1.3.2)
 - [네이버 나눔 글꼴](https://hangeul.naver.com/font/nanum)
