@@ -93,9 +93,8 @@ zsh # Restart zsh shell
 p10k configure # if needed
 ```
 
-## Install asdf plugins
+## Install [asdf plugins](https://github.com/asdf-vm/asdf-plugins)
 
-[asdf plugins repository](https://github.com/asdf-vm/asdf-plugins)  
 After installed some packages, should run `asdf reshim`
 
 ### [Nodejs](https://github.com/asdf-vm/asdf-nodejs)
