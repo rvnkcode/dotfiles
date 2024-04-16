@@ -121,12 +121,10 @@ asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 asdf install rust latest
 ```
 
-### [Typos](https://github.com/aschiavon91/asdf-typos)
+#### [Typos](https://github.com/crate-ci/typos)
 
 ```zsh
-asdf plugin add typos https://github.com/aschiavon91/asdf-typos.git
-asdf install typos latest
-asdf global typos latest
+cargo install typos-cli
 ```
 
 ### [Neovim](https://github.com/richin13/asdf-neovim)
