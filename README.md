@@ -127,11 +127,15 @@ asdf install rust latest
 cargo install typos-cli
 ```
 
-### [Neovim](https://github.com/richin13/asdf-neovim)
+## [Neovim](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
 ```zsh
-asdf plugin add neovim
-asdf install neovim stable
+sudo apt-get install ninja-build gettext cmake unzip curl build-essential
+git clone https://github.com/neovim/neovim
+cd neovim
+git checkout stable
+make CMAKE_BUILD_TYPE=Release
+cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 npm install -g neovim
 sudo apt install ripgrep wl-clipboard
 ```
