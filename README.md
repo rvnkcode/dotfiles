@@ -88,6 +88,7 @@ zsh
 rm -rf .zshrc
 git clone --bare git@github.com:rvnkcode/dotfiles.git $HOME/.dotfiles.git
 dfs checkout rpi
+dfs config --local status.showUntrackedFiles no
 chsh -s $(which zsh) # set zsh as default shell
 zsh # Restart zsh shell
 p10k configure # if needed
