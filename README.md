@@ -140,6 +140,15 @@ npm install -g neovim
 sudo apt install ripgrep wl-clipboard
 ```
 
+## [nb](https://xwmx.github.io/nb/#download-and-install)
+
+```zsh
+sudo wget https://raw.github.com/xwmx/nb/master/nb -O /usr/local/bin/nb &&
+  sudo chmod +x /usr/local/bin/nb
+sudo nb completions install --download
+sudo nb env install
+```
+
 ## APT History
 
 `/var/log/apt/history.log`
