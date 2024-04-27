@@ -24,16 +24,19 @@ After unzip,
 ```zsh
 mkdir -p ~/.local/share/fonts/D2_Coding
 mkdir -p ~/.local/share/fonts/sarasa-fixed-k-nerd-font
+mkdir -p ~/.local/share/fonts/noto-color-emoji
 mv *.ttf ~/.local/share/fonts/font_name
 sudo fc-cache -f -v
 # Check font installation
 fc-list | grep "D2"
 fc-list | grep "sarasa"
+fc-list | grep "noto"
 ```
 
 - [Sarasa-Gothic-Nerd-Fonts](https://github.com/jonz94/Sarasa-Gothic-Nerd-Fonts/releases)
   - [Sarasa Gothic Mono](https://picaq.github.io/sarasa/)
 - [D2Coding Ver 1.3.2](https://github.com/naver/d2codingfont/releases/tag/VER1.3.2)
+- [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji): download manually
 - [네이버 나눔 글꼴](https://hangeul.naver.com/font/nanum): download manually
 
 ## Zsh
