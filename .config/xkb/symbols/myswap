@@ -2,7 +2,8 @@ partial modifier_keys
 xkb_symbols "swapkeys" {
     replace key <ESC> {[ Caps_Lock ]};
     replace key <TLDE> {[ Escape, Escape ]};
-    replace key <CAPS> {[ grave, asciitilde ]};
+    replace key <CAPS> {[ Control_L ]};
     replace key <BKSP> {[ backslash, bar ]};
     replace key <BKSL> {[ BackSpace, BackSpace ]};
+    replace key <LCTL> {[ grave, asciitilde ]};
 };
