@@ -56,7 +56,6 @@ return {
             "codespell",
             "markdownlint",
             "sqlfluff",
-            "typos",
             -- formatter
             "google-java-format",
             "prettier",
