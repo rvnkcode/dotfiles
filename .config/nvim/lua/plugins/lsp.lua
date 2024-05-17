@@ -119,28 +119,12 @@ return {
     end,
     keys = {
       {
-        "<leader>e",
-        vim.diagnostic.open_float,
-        desc = "LSP Diagnostic open float",
-      },
-      {
-        "[d",
-        vim.diagnostic.goto_prev,
-        desc = "LSP Diagnostic go to prev",
-      },
-      {
-        "]d",
-        vim.diagnostic.goto_next,
-        desc = "LSP Diagnostic go to next",
-      },
-      {
         "<leader>q",
         vim.diagnostic.setloclist,
         desc = "LSP Diagnostic list",
       },
       { "gD", vim.lsp.buf.declaration, desc = "LSP Declaration" },
       { "gd", vim.lsp.buf.definition, desc = "LSP Definition" },
-      { "K", vim.lsp.buf.hover, desc = "LSP Hover" },
       { "gi", vim.lsp.buf.implementation, desc = "LSP implementation" },
       {
         "<C-k>",
