@@ -1,11 +1,5 @@
 return {
   {
-    -- https://github.com/numToStr/Comment.nvim
-    "numToStr/Comment.nvim",
-    lazy = false,
-    config = true,
-  },
-  {
     -- https://github.com/windwp/nvim-autopairs
     "windwp/nvim-autopairs",
     event = "InsertEnter",
