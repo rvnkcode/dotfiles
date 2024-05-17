@@ -124,12 +124,6 @@ asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 asdf install rust latest
 ```
 
-#### [Typos](https://github.com/crate-ci/typos)
-
-```zsh
-cargo install typos-cli
-```
-
 ## [Neovim](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
 ```zsh
