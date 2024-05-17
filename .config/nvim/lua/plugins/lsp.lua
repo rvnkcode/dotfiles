@@ -53,7 +53,7 @@ return {
             "lemminx", -- XML
             "yaml-language-server",
             -- linter
-            "codespell",
+            "cspell",
             "markdownlint",
             "sqlfluff",
             -- formatter

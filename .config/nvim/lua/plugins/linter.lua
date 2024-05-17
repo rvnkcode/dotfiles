@@ -20,7 +20,7 @@ return {
         group = vim.api.nvim_create_augroup("LintGroup", { clear = true }),
         callback = function()
           lint.try_lint()
-          lint.try_lint("codespell")
+          lint.try_lint("cspell")
         end,
       })
     end,

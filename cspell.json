@@ -1,0 +1,21 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Taskwarrior",
+    "Rusqlite",
+    "Chrono",
+    "nvim",
+    "sqlfluff",
+    "markdownlint",
+    "lemminx",
+    "jdtls",
+    "astro",
+    "tailwindcss",
+    "taplo",
+    "lspconfig"
+  ],
+  "ignorePaths": [
+    "node_modules/**"
+  ]
+}
