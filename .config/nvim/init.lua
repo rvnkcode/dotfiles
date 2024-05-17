@@ -125,6 +125,9 @@ end
 
 -- ======================================================= Keymap
 keymap.set("n", "<leader>v", ":e $MYVIMRC<CR>")
+keymap.set("n", "<leader>e", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
 
 -- ======================================================= Lazy nvim (plugin)
 -- https://github.com/folke/lazy.nvim#-installation
