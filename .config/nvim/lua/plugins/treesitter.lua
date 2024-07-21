@@ -48,7 +48,6 @@ return {
         },
         highlight = { enable = true },
         indent = { enable = true },
-        autotag = { enable = true },
         sync_install = false,
       })
     end,
@@ -58,9 +57,9 @@ return {
     "windwp/nvim-ts-autotag",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
-      require("nvim-ts-autotag").setup({})
+      require("nvim-ts-autotag").setup({
+        enable = true
+      })
     end,
-    lazy = true,
-    event = "VeryLazy",
   },
 }
